@@ -1,0 +1,1 @@
+# Pyqt5 Custom styles for widgets
