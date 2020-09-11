@@ -1,2 +1,4 @@
 test.py
 README.md.backup
+__pycache__/
+examples/

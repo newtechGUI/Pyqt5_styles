@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QPushButton
+from PyQt5.QtWidgets import QPushButton, QLineEdit
 from PyQt5.QtCore import Qt
 
 class Button(QPushButton):
@@ -19,3 +19,23 @@ class Button(QPushButton):
         self.setText(self.text)
         self.setCursor(Qt.PointingHandCursor)
         self.setStyleSheet(self.styles)
+
+class LineEdit(QLineEdit):
+    def __init__(self, name, plhd, w, h, bg_color):
+        super(LineEdit, self).__init__()
+
+        self.name = name
+        self.plhd = plhd
+        self.w = w
+        self.h = h
+        self.bg_color = bg_color
+
+        self.styles = "QLineEdit { background-color: %s; }" \
+                      % self.bg_color
+
+        self.setObjectName(self.name)
+        self.setPlaceholderText(self.plhd)
+        self.setFixedWidth(self.w)
+        self.setFixedHeight(self.h)
+        self.setStyleSheet(self.styles)
+
